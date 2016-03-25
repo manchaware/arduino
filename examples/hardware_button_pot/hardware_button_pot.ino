@@ -30,7 +30,7 @@ void loop() {
     Serial.print("Potentiometer:");
     Serial.print(pot1.value);
   }
-  
+
   delay(5);
 }
 

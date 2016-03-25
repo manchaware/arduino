@@ -11,7 +11,7 @@
 
 HardwarePot::HardwarePot(int potPin) {
   pin = potPin;
-  for (int thisReading = 0; thisReading < SAMPLE_SIZE; thisReading++) {
+  for (int thisReading = 0; thisReading < HARDWARE_POT_SAMPLE_SIZE; thisReading++) {
     readings[thisReading] = 0;
   }
 }
@@ -27,13 +27,13 @@ bool HardwarePot::changed() {
 
   readIndex = readIndex + 1;
 
-  if (readIndex >= SAMPLE_SIZE) {
+  if (readIndex >= HARDWARE_POT_SAMPLE_SIZE) {
     readIndex = 0;
   }
 
-  value = total / SAMPLE_SIZE;
+  value = total / HARDWARE_POT_SAMPLE_SIZE;
 
-  if (abs(lastVal - value) > THRESHOLD) {
+  if (abs(lastVal - value) > HARDWARE_POT_THRESHOLD) {
     lastVal = value;
     return true;
   }

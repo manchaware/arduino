@@ -12,6 +12,9 @@
 #ifndef HardwarePot_h
 #define HardwarePot_h
 
+#define HARDWARE_POT_SAMPLE_SIZE 10
+#define HARDWARE_POT_THRESHOLD 1
+
 class HardwarePot {
   public:
     HardwarePot(int potPin);
@@ -21,8 +24,6 @@ class HardwarePot {
     int value;
 
   private:
-    int SAMPLE_SIZE = 10;
-    int THRESHOLD = 1;
     int pin;
     int lastVal;
 

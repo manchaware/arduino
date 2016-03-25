@@ -26,7 +26,7 @@ void HardwareButton::getState() {
     lastDebounceTime = millis();
   }
 
-  if ((millis() - lastDebounceTime) > BUTTON_DEBOUNCE_DELAY) {
+  if ((millis() - lastDebounceTime) > HARDWARE_BUTTON_DEBOUNCE_DELAY) {
     if (reading != buttonState) {
       buttonState = reading;
 
@@ -37,7 +37,7 @@ void HardwareButton::getState() {
         lastDownTime = millis();
       }
 
-      if (up && ((millis() - lastDownTime) < BUTTON_CLICK_MAX_DELAY)) {
+      if (up && ((millis() - lastDownTime) < HARDWARE_BUTTON_CLICK_MAX_DELAY)) {
         click = true;
       }
     }

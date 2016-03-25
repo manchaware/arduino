@@ -12,8 +12,8 @@
 #ifndef HardwareButton_h
 #define HardwareButton_h
 
-#define BUTTON_DEBOUNCE_DELAY 25
-#define BUTTON_CLICK_MAX_DELAY 250
+#define HARDWARE_BUTTON_DEBOUNCE_DELAY 25
+#define HARDWARE_BUTTON_CLICK_MAX_DELAY 250
 
 class HardwareButton {
   public:
